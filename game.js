@@ -57,6 +57,9 @@ function usePan() {
   if (modActive == false) {
     chicken.items.push(items.pan)
     modActive = true
+  } else {
+    modActive = false,
+      chicken.items = []
   }
   update()
 }
@@ -65,6 +68,9 @@ function useBat() {
   if (modActive == false) {
     chicken.items.push(items.bat)
     modActive = true
+  } else {
+    modActive = false
+    chicken.items = []
   }
   update()
 }
@@ -72,6 +78,9 @@ function useHelmet() {
   if (modActive == false) {
     chicken.items.push(items.helmet)
     modActive = true
+  } else {
+    modActive = false
+    chicken.items = []
   }
   update()
 }
