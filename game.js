@@ -9,7 +9,7 @@ let items = {
 
   pan: {
     name: "Frying Pan",
-    modifier: 5
+    modifier: 5,
   },
 
   bat: {
@@ -19,7 +19,7 @@ let items = {
 
   helmet: {
     name: "Helmet",
-    modifier: -10
+    modifier: -10,
   }
 
 }
@@ -38,7 +38,7 @@ function slap() {
 }
 function punch() {
   if (chicken.health >= 1) {
-    let damage = 5
+    let damage = 5 + addMods();
     chicken.health -= damage;
     chicken.targetHits++
   }
@@ -46,7 +46,7 @@ function punch() {
 }
 function kick() {
   if (chicken.health >= 1) {
-    let damage = 10
+    let damage = 10 + addMods();
     chicken.health -= damage
     chicken.targetHits++
   }
@@ -60,11 +60,26 @@ function usePan() {
   }
   update()
 }
+
+function useBat() {
+  if (modActive == false) {
+    chicken.items.push(items.bat)
+    modActive = true
+  }
+  update()
+}
+function useHelmet() {
+  if (modActive == false) {
+    chicken.items.push(items.helmet)
+    modActive = true
+  }
+  update()
+}
+
 function addMods() {
-  debugger
-  var mods = 0
-  for (let i = 0; i <= chicken.items.length; i++) {
-    mods = chicken.items[i]
+  var mods = 0;
+  for (let i = 0; i < chicken.items.length; i++) {
+    mods = chicken.items[i].modifier;
   }
   return mods
 }
