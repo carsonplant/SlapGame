@@ -84,6 +84,11 @@ function useHelmet() {
   }
   update()
 }
+function reset() {
+  chicken.health = 100
+  chicken.targetHits = 0
+  update()
+} reset()
 
 function addMods() {
   var mods = 0;
