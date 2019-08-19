@@ -54,7 +54,7 @@ function kick() {
 }
 
 function usePan() {
-  if (modActive == false) {
+  if (modActive == false && chicken.health < 100) {
     chicken.items.push(items.pan)
     modActive = true
   } else {
@@ -65,7 +65,7 @@ function usePan() {
 }
 
 function useBat() {
-  if (modActive == false) {
+  if (modActive == false && chicken.health < 100) {
     chicken.items.push(items.bat)
     modActive = true
   } else {
@@ -75,7 +75,7 @@ function useBat() {
   update()
 }
 function useHelmet() {
-  if (modActive == false) {
+  if (modActive == false && chicken.health < 100) {
     chicken.items.push(items.helmet)
     modActive = true
   } else {
