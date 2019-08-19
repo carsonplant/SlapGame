@@ -1,6 +1,6 @@
 let chicken = {
   health: 100,
-  name: "Fighting Chicken",
+  name: "Earnie the Giant Chicken",
   targetHits: 0,
   items: []
 }
