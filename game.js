@@ -93,7 +93,7 @@ function addMods() {
   return mods
 }
 function update() {
-  document.getElementById("name").innerText = `${chicken.name}` //+= targetName
+  //document.getElementById("name").innerText = `${chicken.name}` //+= targetName
   document.getElementById("hits").innerText = `${chicken.targetHits}` //+= targetName
   if (chicken.health <= 0) {
     document.getElementById("health").innerText = "Defeated" //+= health
